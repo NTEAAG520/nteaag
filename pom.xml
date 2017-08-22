@@ -14,19 +14,17 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <version>6.1.7</version>
                 <configuration>
-                    <scanIntervalSeconds>5</scanIntervalSeconds><!-- 多少秒进行一次热部署 -->
-                    <webApp>
-                        <webAppSourceDirectory>${project.build.directory}/${pom.artifactId}-${pom.version}
-                        </webAppSourceDirectory>
-                        <contextPath>/</contextPath>
-                    </webApp>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
                             <port>8082</port>
-                            <maxIdleTime>30000</maxIdleTime>
                         </connector>
                     </connectors>
-                    <scanIntervalSeconds>5</scanIntervalSeconds>
+                    <scanIntervalSeconds>5</scanIntervalSeconds><!-- 多少秒进行一次热部署 -->
+                    <webApp>
+                        <contextPath>/webapp</contextPath>
+                    </webApp>
+                    <!--<webAppSourceDirectory>${project.build.directory}/${pom.artifactId}-${pom.version}-->
+                    <!--</webAppSourceDirectory>-->
                 </configuration>
             </plugin>
         </plugins>
