@@ -1,0 +1,97 @@
+
+body {
+    background-color: #F1F1F1;
+    text-align: center;
+
+}
+
+h3 {
+    color: crimson;
+    text-align: center;
+    font-family: Consolas, serif;
+    margin-top: 200px;
+    padding-top: 20px;
+}
+
+#image {
+    text-align: center;
+    width: 140px;
+    height: 165px;
+}
+
+#div1 {
+    margin-left: 620px;
+    width: 360px;
+    height: 540px;
+    background-color: #fff;
+    text-align: center;
+    padding-left: 0px;
+
+}
+
+#form1 {
+    margin-top: 20px;
+    height: 200px;
+    padding: 0px;
+    margin-bottom: 0px;
+
+}
+
+#input1 {
+    text-align: center;
+}
+
+#pass {
+    height: 35px;
+    width: 260px;
+}
+
+#name {
+    height: 35px;
+    width: 260px;
+}
+
+#vcode {
+    height: 35px;
+    width: 180px;
+}
+
+#image2 {
+    height: 35px;
+    width: 80px;
+    margin-bottom: -13px;
+}
+
+#input2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+
+}
+
+#input3 {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: center;
+
+}
+
+#auto {
+    padding-top: 10px;
+}
+
+#submit {
+    text-align: center;
+}
+
+#btn1 {
+    height: 40px;
+    width: 240px;
+    background-color: #37aeff;
+}
+
+.s1 {
+    cursor: pointer;
+}

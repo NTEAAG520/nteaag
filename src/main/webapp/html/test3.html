@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <script type="text/javascript" src="../js/test3.js"></script>
+</head>
+<body>
+<form action="" id="myform" name="myform" method="post">
+    <p>
+        第一个数<input id="num1" name="num1" type="text" size="25"><br>
+        第二个数<input id="num2" name="num2" type="text" size="25">
+    </p>
+    <p>
+        <input id="addButton" name="addButton" type="button" value="+" onclick="compute('+')">
+        <input id="subButton" name="subButton" type="button" value="-" onclick="compute('-')">
+        <input id="mulButton" name="mulButton" type="button" value="*" onclick="compute('*')">
+        <input id="divButton" name="divButton" type="button" value="/" onclick="compute('/')">
+    </p>
+    <p>
+        计算结果<input id="result" name="result" type="text" size="25">
+    </p>
+    <input id="resultButton" name="resultButton" type="button" value="显示结果" onclick="result2()">
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

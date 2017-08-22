@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uri测试</title>
+</head>
+<body style="font-size: 22px">
+<h3>请求资源路径的处理</h3>
+<ul>
+    <li style="margin: 40px">正确匹配
+        <ul>
+            <li>url-pattern:/html/uriTest.html</li>
+            <li><a href="uriTest.html">uriTest.html</a> </li>
+            <li><a href="html/uriTest.html">html/uriTest.html</a> </li>
+        </ul>
+
+    </li>
+    <li style="margin: 40px">通配符匹配
+        <ul>
+            <li>url-pattern:/html/*</li>
+            <li><a href="uriTest.html">uriTest.html</a> </li>
+            <li><a href="html/html/def.html">html/html/def.html</a> </li>
+        </ul>
+
+    </li>
+    <li style="margin: 40px">后缀匹配
+        <ul>
+            <li>url-pattern:*.do</li>
+            <li><a href="uriTest.do">uriTest.do</a> </li>
+            <li><a href="html/uriTest.do">html/uriTest.do</a> </li>
+        </ul>
+
+    </li>
+</ul>
+
+</body>
+</html>

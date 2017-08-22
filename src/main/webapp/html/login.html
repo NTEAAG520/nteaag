@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>店家联盟后台管理</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="../css/login.css"/>
+    <link rel="stylesheet" href="../css/pintuer.css"/>
+    <!--[if lt IE 8]>
+    <script type="text/javascript">
+        alert('请您升级到IE8或以上版本!');
+        window.open("http://www.baidu.com/search/theie6countdown.html", "_self");
+    </script>
+    <![endif]-->
+</head>
+<style>
+    .input {
+        height: 43px;
+    }
+
+    .field-icon-right .icon {
+        line-height: 43px;
+    }
+
+    .input-help ul {
+        list-style: none;
+    }
+
+    .passcode {
+        height: 41px;
+        width: 90px;
+    }
+
+    /*响应式显示顶部logo*/
+    @media (max-width: 760px) {
+        .logo-big {
+            width: 185px;
+            height: 45px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 10px auto;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .padding {
+            margin-top: 60px;
+        }
+    }
+
+    @media (min-width: 761px) and (max-width: 1000px) {
+        .logo-big {
+            width: 185px;
+            height: 45px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 20px auto;
+        }
+
+        .padding {
+            margin-top: 50px;
+        }
+    }
+
+    @media (min-width: 1001px) and (max-width: 1200px) {
+        .logo-big {
+            width: 120px;
+            height: 145px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 20px auto;
+        }
+
+        .padding {
+            margin-top: 50px;
+        }
+    }
+
+    @media (min-width: 1201px) {
+        .logo-big {
+            width: 120px;
+            height: 145px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 20px auto;
+        }
+
+        .padding {
+            margin-top: 80px;
+        }
+    }
+</style>
+<body style="background:#F1F1F1;">
+<div class="container">
+    <div class="line">
+        <div class="xs6 xm4 xs3-move xm4-move">
+            <form action="/djlm_master.php?s=/Admin/Login/index.html" method="post">
+                <div class="panel padding">
+                    <div class="text-center">
+                        <div class="logo-big"></div>
+                        <div style="padding:30px;">
+                            <div class="form-group">
+                                <div class="field field-icon-right">
+                                    <input type="text" class="input" id="username" name="username" placeholder="登录账号"
+                                           data-validate="required:请填写账号!,length#>=0:账号长度不符合要求"/>
+                                    <span class="icon icon-user"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="field field-icon-right">
+                                    <input type="password" class="input" id="password" name="password"
+                                           placeholder="登录密码" data-validate="required:请填写密码!,length#>=0:密码长度不符合要求"/>
+                                    <span class="icon icon-key"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="field">
+                                    <input type="text" class="input" name="code" placeholder="填写验证码"
+                                           data-validate="required:请填写验证码!" maxlength="4"/>
+                                    <img src="/djlm_master.php?s=/Admin/Login/getVerify.html"
+                                         class="passcode verifyimg reloadverify" width="90" height="41"
+                                         style="cursor: pointer;" title="点击刷新"/>
+                                </div>
+                            </div>
+                            <div class="form-group" style="float:left;">
+                                <label>
+                                    <input type="checkbox" name="checkbox" checked/>自动登录<span
+                                        style="color: #818181;font-size: 10px">（公共电脑不建议自动登录，以防账号丢失）</span>
+                                </label>
+                            </div>
+                            <div class="form-group" style="margin-top: 20px;">
+                                <div class="field">
+                                    <button class="button button-block bg-main text-big"
+                                            style="background:#0099FF;border: none;padding: 15px 5px;">
+                                        立即登录
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        //刷新验证码
+        var verifyimg = $(".verifyimg").attr("src");
+        $(".reloadverify").click(function () {
+            if (verifyimg.indexOf('?') > 0) {
+                $(".verifyimg").attr("src", verifyimg + '&random=' + Math.random());
+            } else {
+                $(".verifyimg").attr("src", verifyimg.replace(/\?.*$/, '') + '?' + Math.random());
+            }
+        });
+    });
+</script>
+
+</html>
