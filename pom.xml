@@ -25,6 +25,23 @@
                         <contextPath>/</contextPath>
                     </webAppConfig>
                     <scanIntervalSeconds>5</scanIntervalSeconds>
+                    <!--<daemon>true</daemon>-->
+                    <scanTargets>
+                        <scanTarget>src/</scanTarget>
+                    </scanTargets>
+                    <scanTargetPatterns>
+                        <scanTargetPattern>
+                            <directory>src</directory>
+                            <includes>
+                                <include>pom.xml</include>
+                                <include>nteaag.iml</include>
+                            </includes>
+                            <excludes>
+                                <exclude>.gitignore</exclude>
+                                <exclude>README.md</exclude>
+                            </excludes>
+                        </scanTargetPattern>
+                    </scanTargetPatterns>
                 </configuration>
             </plugin>
         </plugins>

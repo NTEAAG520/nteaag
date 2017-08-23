@@ -36,8 +36,8 @@
             </div>
             <div id="auto">
                 <label>
-                    <input type="checkbox" name="checkbox" checked/>自动登录
-                    <span style="color: #818181;font-size: 10px">（公共电脑不建议自动登录，以防账号丢失）</span>
+                    <input type="checkbox" name="checkbox" checked/><span id="auto_button">自动登录</span>
+                    <span style="color: #818181;font-size: 5px">（公共电脑不建议自动登录，以防账号丢失）</span>
                 </label><br><br>
             </div>
             <div id="submit">
