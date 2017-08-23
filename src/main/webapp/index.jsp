@@ -31,7 +31,8 @@
             <div id="input3">
                 <input id="vcode" type="text" class="input" name="vcode" placeholder="验证码"
                        data-validate="required:请填写验证码!">
-                <img id="image2" src="/validateCode" onclick="this.src='/validateCode?'+Math.random();" class="s1" title="点击更换"><br>
+                <img id="image2" src="/validateCode" onclick="this.src='/validateCode?'+Math.random();" class="s1"
+                     title="点击更换"><br>
                 <span class="icon icon-user"></span>
             </div>
             <div id="auto">
