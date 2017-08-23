@@ -16,7 +16,7 @@
     <h3>系统登录</h3>
     <div id="div2">
         <div>
-            <img id="image" src="resource/logo-blue.png">
+            <img id="image" src="resource/NTEAAG520.jpg">
         </div>
         <form id="form1" action="../index.do" method="post">
             <div id="input1">
