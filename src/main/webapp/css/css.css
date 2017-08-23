@@ -6,7 +6,7 @@ body {
 }
 
 h3 {
-    color: crimson;
+    color: #080a08;
     text-align: center;
     font-family: Consolas, serif;
     margin-top: 200px;
@@ -15,8 +15,8 @@ h3 {
 
 #image {
     text-align: center;
-    width: 140px;
-    height: 165px;
+    width: 260px;
+    height: 185px;
 }
 
 #div1 {
