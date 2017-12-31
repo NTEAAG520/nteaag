@@ -34,7 +34,7 @@
                             <directory>src</directory>
                             <includes>
                                 <include>pom.xml</include>
-                                <include>nteaag.iml</include>
+                                <include>nteaag520.iml</include>
                             </includes>
                             <excludes>
                                 <exclude>.gitignore</exclude>
