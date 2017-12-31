@@ -4,10 +4,20 @@
 
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
+
+    <!--配置监听器-->
+    <listener>
+        <listener-class>listener.CountListener</listener-class>
+    </listener>
+
     <!--配置 servlet-->
     <servlet>
         <servlet-name>validateCode</servlet-name>
         <servlet-class>servlet.validateCode</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>servlet.LogoutServlet</servlet-class>
     </servlet>
 
 
@@ -16,5 +26,10 @@
         <servlet-name>validateCode</servlet-name>
         <url-pattern>/validateCode</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
 
