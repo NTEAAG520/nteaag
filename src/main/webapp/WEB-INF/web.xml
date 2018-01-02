@@ -19,6 +19,10 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>servlet.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QRCodeServlet</servlet-name>
+        <servlet-class>servlet.QRCodeServlet</servlet-class>
+    </servlet>
 
 
     <!--配置 servlet-mapping-->
@@ -29,6 +33,10 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QRCodeServlet</servlet-name>
+        <url-pattern>/QRCodeServlet</url-pattern>
     </servlet-mapping>
     
 </web-app>

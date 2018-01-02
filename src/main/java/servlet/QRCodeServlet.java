@@ -18,11 +18,11 @@ public class QRCodeServlet extends HttpServlet {
         resp.setContentType("image/png;charset=UTF-8");
         req.setCharacterEncoding("UTF-8");
         String qrcodeContent = req.getParameter("qrcodecontent");
-        ByteArrayOutputStream arrayOutputStream = QRCode.from(qrcodeContent).to(ImageType.JPG).stream();
-        resp.setContentLength(arrayOutputStream.size());
-        OutputStream outputStream = resp.getOutputStream();
-        outputStream.write(arrayOutputStream.toByteArray());
-        arrayOutputStream.flush();
-        arrayOutputStream.close();
+            ByteArrayOutputStream arrayOutputStream = QRCode.from(qrcodeContent).to(ImageType.JPG).stream();
+            resp.setContentLength(arrayOutputStream.size());
+            OutputStream outputStream = resp.getOutputStream();
+            outputStream.write(arrayOutputStream.toByteArray());
+            arrayOutputStream.flush();
+            arrayOutputStream.close();
     }
 }
