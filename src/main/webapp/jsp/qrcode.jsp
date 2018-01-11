@@ -53,15 +53,19 @@
 
         .imagecode {
             width: 265px;
-            height: 265px;
+            height: 240px;
             margin-left: 290px;
             margin-top: 5px;
         }
 
         .help-inline {
-            margin-left: 354px;
-            margin-top: 18px;
+            margin-top: 2px;
         }
+        h6{
+            font-size: 12px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -71,7 +75,7 @@
             <h4>二维码生成</h4>
             <hr style="border-style: inset; margin-top: 30px;">
             <div class="content1">
-                二维码内容：<input class="qrcontent1" type="text" name="qrcodecontent" value="http://www.jetbrains.com">
+                二维码内容：<input class="qrcontent1" type="text" name="qrcodecontent" value="http://www.baidu.com">
                 <input class="submit1" type="submit" value="生成">
                 <span class="span1">请输入要生成二维码的字符串</span>
             </div>
@@ -80,8 +84,8 @@
                 <h4>二维码图像</h4>
             </div>
             <div class="image1">
-                <img class="imagecode" src="/validateCode" onclick="this.src='/validateCode?'+Math.random();" class="s1" title="点击更换"/>
-                <h6 class="help-inline">使用微信扫一扫</h6>
+                <img class="imagecode" src="show.jsp"/>
+                <h6 class="help-inline">使用微信扫一扫 </h6>
             </div>
         </div>
     </form>
