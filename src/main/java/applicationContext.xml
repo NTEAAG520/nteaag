@@ -3,4 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--1.使用构造器来实例化的方式的配置代码如下：-->
+    <bean id="calendarObj1" class="java.util.GregorianCalendar"></bean>
+
+    <!--2.使用静态工厂方法实例化的方式的配置代码如下：-->
+    <bean id="calendarObj2" class="java.util.Calendar" factory-method="getInstance"></bean>
+
+    <!--3.使用实例工厂方法实例化的方式的配置代码如下：-->
+    <bean id="calendarObj3" class="java.util.GregorianCalendar"></bean>
+    <bean id="dateObj" factory-bean="calendarObj3" factory-method="getTime"></bean>
 </beans>
