@@ -2,7 +2,7 @@ package test;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -13,9 +13,8 @@ public class TestCase {
      */
     @Test
     public void teatInitContext(){
-        String conf = "applicationContext.xml";
-        ApplicationContext applicationContext =
-                new ClassPathXmlApplicationContext(conf);
+        String conf = "C:\\apache-tomcat-9.0.1\\webapps\\ROOT\\WEB-INF\\applicationContext.xml";
+        ApplicationContext applicationContext = new FileSystemXmlApplicationContext(conf);
         System.out.println("applicationContext文件内容："+applicationContext);
 
     }
@@ -24,9 +23,8 @@ public class TestCase {
     public void testCreateBeanObject(){
 
 //        实例化Spring容器示例
-        String conf = "applicationContext.xml";
-        ApplicationContext applicationContext =
-                new ClassPathXmlApplicationContext(conf);
+        String conf = "C:\\apache-tomcat-9.0.1\\webapps\\ROOT\\WEB-INF\\applicationContext.xml";
+        ApplicationContext applicationContext = new FileSystemXmlApplicationContext(conf);
 //        1.用构造器莱实例化的方式
 //        Calendar calendar1 = (Calendar) applicationContext.getBean("calendarObj1");  //方式1
         Calendar calendar1 = applicationContext.getBean("calendarObj1", Calendar.class);  //方式2
