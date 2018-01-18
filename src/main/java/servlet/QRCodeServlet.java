@@ -7,9 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 
 public class QRCodeServlet extends HttpServlet {
 
@@ -19,10 +17,21 @@ public class QRCodeServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         String qrcodeContent = req.getParameter("qrcodecontent");
             ByteArrayOutputStream arrayOutputStream = QRCode.from(qrcodeContent).to(ImageType.JPG).stream();
-            resp.setContentLength(arrayOutputStream.size());
-            OutputStream outputStream = resp.getOutputStream();
-            outputStream.write(arrayOutputStream.toByteArray());
+
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(new File("D:\\output.jpg"));
+            // Put data in your baos
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(arrayOutputStream);
+            objectOutputStream.writeObject(qrcodeContent);
+            objectOutputStream.flush();
+            objectOutputStream.close();
+            arrayOutputStream.writeTo(fos);
             arrayOutputStream.flush();
             arrayOutputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        resp.sendRedirect("/jsp/qrcode.jsp");
     }
 }
